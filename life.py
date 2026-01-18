@@ -1,7 +1,15 @@
 import streamlit as st
 from utils.database import get_connection , delete_blog
+from utils.database import get_blogs_by_category
 
 st.title("Reflections on Life")
+
+blogs = get_blogs_by_category("Personal Life")
+
+for blog in blogs:
+    st.subheader(blog[1])
+    st.write(blog[2])
+    st.caption(blog[3])
 
 conn = get_connection()
 c = conn.cursor() 
