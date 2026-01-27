@@ -15,4 +15,4 @@ with col1:
     """)
 
 with col2:
-    st.image("me.png", use_container_width=True)
+    st.image("images/me.png", use_container_width=True)
